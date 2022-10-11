@@ -1,3 +1,4 @@
+import time
 import datetime
 import threading
 import pandas as pd
@@ -26,6 +27,7 @@ if __name__ == "__main__":
         proc = threading.Thread(target=collect_stock_info, args=(ticker,))
         procs.append(proc)
         proc.start()
+        time.sleep(0.01)
     for proc in procs:
         proc.join()
     print("_ _ _ _ _ _ _ _ _\n")
@@ -38,3 +40,4 @@ if __name__ == "__main__":
     date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     df.to_excel(r'./%s.xlsx'%date)
     print("\nExcel file downloaded\n")
+    
