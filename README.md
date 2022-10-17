@@ -1,5 +1,5 @@
 # Market View
-Market View is a Python script that returns the most recent daily percentage changes for all stocks in the S&P 500 and downloads the data in an Excel file.
+Market View is a Python script that returns the most recent daily percentage changes for all stocks in the S&P 500 and stores the sorted data in an Excel file.
 
 ## Getting Started
 ### Prerequisites
